@@ -1,38 +1,79 @@
+
 \documentclass[12pt]{article}
 
+%% Mathematics
+%\usepackage{amsmath,amssymb,amsthm}
+
+%% Physics
+%\usepackage{physics}
+
+%% Customization of captions in floating environments
+%\usepackage{caption} % for \caption*
+
+%% Citation improvement
+%\usepackage{cite}
+
+%% Hypertext marks
+\usepackage[hidelinks]{hyperref} % `hyperref` configuration must go before `orcidlink` to avoid the "Option clash for package hyperref" error.
+
+%% ORCID
 \usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
-\usepackage{amssymb}
-\usepackage{physics}
-%\usepackage{cite} % may be useful for different formats of numerical citation
-\usepackage{hyperref} % for hyperlinks in references
 
-\usepackage{caption} % for \caption*
+%% Page layout settings
+%\textwidth 160mm
+%\textheight 230mm
+%\voffset = -20mm
 
-\textwidth 160mm
-\textheight 230mm
-\voffset = -20mm
+\title{Title of the manuscript}
 
-\title{The article title}
-
-\author{R.V.~Romanik
-	\\ \small Institute for Condensed Matter Physics, NAS of Ukraine 
+\author{R.V.~Romanik \orcidlink{0009-0008-2405-9038}
+	\\ \small Yukhnovskii Institute for Condensed Matter Physics, NAS of Ukraine 
 	\\ \small 1~Svientsitskii Street, 79011, Lviv, Ukraine 
 	\\ \small romanik@icmp.lviv.ua}
-%\author{R.V.~Romanik \\ Institute for Condensed Matter Physics, NAS of Ukraine}
+
+%\date{} % to remove the date
 
 \begin{document}
 	
 	\maketitle
 	
-	%\begin{multicols}{2}
+	\begin{abstract}
+		Abstract text. Pseudo-abstract. We investigate the thermodynamic behavior of a generalized many-particle system with competing interactions within a self-consistent theoretical framework. The model incorporates nonlinear coupling between microscopic degrees of freedom and macroscopic response functions, allowing us to examine the emergence of collective phenomena under varying external conditions.		
+		\\[0.5cm]
+		\textbf{Keywords:} Simple fluids, critical behavior.
+	\end{abstract}
 	
-	\abstract{The topic of the article is studied in great details.
-		\\	
-		\textbf{Keywords: } Simple fluids, Critical behavior.
-	}
-	\section{Introduction}
+	\tableofcontents
 	
-	%\bibliographystyle{cmpj} % still looking for the best style
-	%\bibliography{fluids_general} % BibTeX / BibLaTeX should be used
-
+	\section{Introduction}	
+	Some introductory text with a citation
+	\cite{RDKPS26a,RDKPS26b}, \cite{KD22}.
+	
+	\textbf{Pseudo-Introduction.} The collective behavior of interacting many-particle systems
+	has attracted considerable attention in modern statistical
+	physics due to its importance for understanding complex
+	thermodynamic phenomena \cite{PLA99,HansenMcDonald13,Johnston14}.
+	In particular, the interplay between microscopic interactions
+	and macroscopic fluctuations may lead to nontrivial
+	modifications of the equation of state and the emergence
+	of anomalous phase behavior \cite{WM02,AW07}.
+	Despite substantial theoretical progress, several aspects
+	of these phenomena remain insufficiently understood.
+	
+	\section{Model}
+	
+	The partition function is
+	\begin{equation}
+		\Xi = \sum_{N=0}^{\infty}
+		e^{\beta\mu N} Z_N.
+	\end{equation}
+	
+	\section{Results}
+	
+	\section{Conclusions}
+	
+	% Bibliography
+	\bibliographystyle{elsarticle-num}
+	\bibliography{articles,books}
+	
 \end{document}
